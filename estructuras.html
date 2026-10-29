@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructuras web | María Psicología</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+  <main class="pagina">
+    <div class="pagina__cabecera">
+      <h1>Estructuras web</h1>
+      <a href="index.html" class="btn btn--outline">← Volver</a>
+    </div>
+
+    <div class="miniaturas">
+      <a href="estructuras/estructura-1/index.html" class="miniatura">
+        <div class="miniatura__marco"><iframe src="estructuras/estructura-1/index.html" tabindex="-1" loading="lazy" title="Estructura 1"></iframe></div>
+        <h2>Estructura 1 · Clásica</h2>
+        <p>Menú superior, imagen a un lado y secciones en bloques.</p>
+      </a>
+      <a href="estructuras/estructura-2/index.html" class="miniatura">
+        <div class="miniatura__marco"><iframe src="estructuras/estructura-2/index.html" tabindex="-1" loading="lazy" title="Estructura 2"></iframe></div>
+        <h2>Estructura 2 · Minimalista</h2>
+        <p>Portada a pantalla completa y contenido centrado.</p>
+      </a>
+      <a href="estructuras/estructura-3/index.html" class="miniatura">
+        <div class="miniatura__marco"><iframe src="estructuras/estructura-3/index.html" tabindex="-1" loading="lazy" title="Estructura 3"></iframe></div>
+        <h2>Estructura 3 · Menú lateral</h2>
+        <p>Barra lateral fija con el menú y contenido a la derecha.</p>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    // Escala cada iframe para que la web completa quepa en su miniatura
+    const marcos = document.querySelectorAll('.miniatura__marco');
+    const escalar = () => marcos.forEach(m => {
+      m.querySelector('iframe').style.transform = `scale(${m.clientWidth / 1280})`;
+    });
+    escalar();
+    window.addEventListener('resize', escalar);
+  </script>
+</body>
+</html>

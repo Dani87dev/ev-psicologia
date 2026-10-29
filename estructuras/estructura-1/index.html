@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="María — Psicóloga. Terapia individual, de pareja y online.">
+  <title>María | Psicología</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../css/volver.css">
+</head>
+<body>
+  <a href="../../estructuras.html" class="volver">← Volver</a>
+
+  <!-- CABECERA -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo">María <span>Psicología</span></a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#enfoque">Cómo trabajo</a></li>
+          <li><a href="#contacto" class="btn btn--small">Pide cita</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1>Un espacio seguro para cuidar de ti</h1>
+          <p>Acompañamiento psicológico cercano y profesional, presencial y online.</p>
+          <a href="#contacto" class="btn">Reserva tu primera sesión</a>
+        </div>
+        <div class="hero__img">
+          <div class="ph ph--hero">Imagen</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="section">
+      <div class="container about">
+        <div class="ph about__img">Foto</div>
+        <div>
+          <h2>Sobre mí</h2>
+          <p>Soy María, psicóloga colegiada (nº colegiada XXXX). Texto de presentación: formación, experiencia y qué te mueve en tu trabajo.</p>
+          <p>Segundo párrafo: especialidades, enfoque, a quién acompañas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Servicios</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Terapia individual</h3>
+            <p>Ansiedad, estrés, autoestima, duelo, gestión emocional…</p>
+          </article>
+          <article class="card">
+            <h3>Terapia de pareja</h3>
+            <p>Comunicación, conflictos, crisis y toma de decisiones.</p>
+          </article>
+          <article class="card">
+            <h3>Terapia online</h3>
+            <p>Sesiones por videollamada desde donde estés.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO TRABAJO -->
+    <section id="enfoque" class="section">
+      <div class="container">
+        <h2 class="section__title">Cómo trabajo</h2>
+        <ol class="steps">
+          <li><strong>Primer contacto</strong> Me escribes y resolvemos dudas.</li>
+          <li><strong>Primera sesión</strong> Conocemos qué te trae y fijamos objetivos.</li>
+          <li><strong>Proceso</strong> Sesiones adaptadas a ti y a tu ritmo.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section section--alt">
+      <div class="container contact">
+        <div>
+          <h2>Contacto</h2>
+          <p>Escríbeme y te responderé lo antes posible.</p>
+          <ul class="contact__info">
+            <li>📞 <a href="tel:+34000000000">+34 000 000 000</a></li>
+            <li>✉️ <a href="mailto:hola@ejemplo.com">hola@ejemplo.com</a></li>
+            <li>📍 Dirección de la consulta</li>
+          </ul>
+        </div>
+
+        <form class="form" action="#" method="post">
+          <label>Nombre
+            <input type="text" name="nombre" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Mensaje
+            <textarea name="mensaje" rows="5" required></textarea>
+          </label>
+          <label class="form__check">
+            <input type="checkbox" name="privacidad" required>
+            Acepto la <a href="#">política de privacidad</a>
+          </label>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> María Psicología</p>
+      <nav>
+        <a href="#">Aviso legal</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
