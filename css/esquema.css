@@ -1,0 +1,41 @@
+/* Estilos comunes de los esquemas de estructura (wireframes) */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Nunito Sans", sans-serif; background: #fbf8f4; }
+
+.esq { max-width: 1200px; margin: 0 auto; padding: 24px; display: grid; gap: 16px; }
+
+/* Bloque genérico */
+.b {
+  display: grid;
+  place-items: center;
+  min-height: 60px;
+  padding: 12px;
+  text-align: center;
+  background: #ece8e2;
+  border: 2px dashed #c4bcb1;
+  border-radius: 10px;
+  color: #8a8178;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.b small { display: block; font-weight: 400; text-transform: none; letter-spacing: 0; margin-top: 4px; }
+.b--oscuro { background: #ddd6cc; }
+.b--acento { background: #d6e5de; border-color: #7a9e8e; color: #5d8172; }
+.b--redondo { border-radius: 50%; aspect-ratio: 1; }
+
+/* Filas y columnas */
+.fila { display: grid; gap: 16px; grid-template-columns: repeat(var(--cols, 2), 1fr); }
+.pila { display: grid; gap: 16px; align-content: start; }
+
+/* Alturas */
+.h-xs { min-height: 50px; }
+.h-s  { min-height: 120px; }
+.h-m  { min-height: 220px; }
+.h-l  { min-height: 360px; }
+.h-xl { min-height: 560px; }
+
+@media (max-width: 700px) {
+  .fila { grid-template-columns: 1fr; }
+}

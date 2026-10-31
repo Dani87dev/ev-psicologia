@@ -86,3 +86,41 @@ h1, h2, h3 { font-family: var(--font-title); line-height: 1.2; font-weight: 500;
 .miniatura:hover .miniatura__marco { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,.1); }
 .miniatura h2 { font-size: 1.2rem; margin-top: 1rem; }
 .miniatura p { color: var(--color-muted); font-size: .95rem; }
+
+/* ===== Selección de fotos ===== */
+.fotos__intro { color: var(--color-muted); margin-bottom: 2rem; }
+.fotos { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; padding-bottom: 6rem; }
+.foto {
+  position: relative;
+  padding: 0;
+  border: 3px solid transparent;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-bg-alt);
+  cursor: pointer;
+  transition: border-color .2s, transform .2s;
+}
+.foto:hover { transform: translateY(-3px); }
+.foto img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.foto__marca {
+  position: absolute; top: .6rem; right: .6rem;
+  width: 32px; height: 32px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--color-primary); color: #fff; font-weight: 600;
+  opacity: 0; transform: scale(.6);
+  transition: opacity .2s, transform .2s;
+}
+.foto[aria-pressed="true"] { border-color: var(--color-primary); }
+.foto[aria-pressed="true"] .foto__marca { opacity: 1; transform: scale(1); }
+
+.fotos__barra {
+  position: fixed; left: 50%; bottom: 1.5rem;
+  transform: translateX(-50%);
+  display: flex; align-items: center; gap: 1.2rem;
+  padding: .6rem .6rem .6rem 1.4rem;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+}
+.fotos__barra[hidden] { display: none; }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selección de fotos | María Psicología</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+  <main class="pagina">
+    <div class="pagina__cabecera">
+      <h1>Selección de fotos</h1>
+      <a href="index.html" class="btn btn--outline">← Volver</a>
+    </div>
+
+    <p class="fotos__intro">Pulsa sobre las fotos que te gusten para marcarlas. Cuando acabes, envíame tu selección.</p>
+
+    <div class="fotos" id="fotos"></div>
+    <div class="vacio" id="fotos-vacio" hidden>Próximamente: fotos para elegir</div>
+
+    <div class="fotos__barra" id="fotos-barra" hidden>
+      <span id="fotos-contador">0 seleccionadas</span>
+      <a href="#" class="btn" id="fotos-enviar">Enviar selección</a>
+    </div>
+  </main>
+
+  <script src="js/fotos.js"></script>
+</body>
+</html>
