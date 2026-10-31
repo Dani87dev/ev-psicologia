@@ -16,23 +16,7 @@
       <a href="index.html" class="btn btn--outline">← Volver</a>
     </div>
 
-    <div class="miniaturas" style="max-width: 640px;">
-      <a href="estructuras/estructura-2/index.html" class="miniatura">
-        <div class="miniatura__marco"><iframe src="estructuras/estructura-2/index.html" tabindex="-1" loading="lazy" title="Estructura 2"></iframe></div>
-        <h2>Imagen a pantalla completa</h2>
-        <p>Una imagen grande y tranquila como primera impresión.</p>
-      </a>
-    </div>
+    <div class="vacio">Próximamente: propuestas de estructura</div>
   </main>
-
-  <script>
-    // Escala cada iframe para que la web completa quepa en su miniatura
-    const marcos = document.querySelectorAll('.miniatura__marco');
-    const escalar = () => marcos.forEach(m => {
-      m.querySelector('iframe').style.transform = `scale(${m.clientWidth / 1280})`;
-    });
-    escalar();
-    window.addEventListener('resize', escalar);
-  </script>
 </body>
 </html>
